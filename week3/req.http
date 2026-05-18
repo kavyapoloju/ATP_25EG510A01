@@ -1,0 +1,76 @@
+### Read all users
+GET http://localhost:4000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhamVzaEBnbWFpbC5jb20iLCJpYXQiOjE3NzI4NzYyNTIsImV4cCI6MTc3Mjg3NjM1Mn0.jXmmZRmJwiz8BijDimd9cAIjZD8Ye2OkwWoawCAQCLw; Path=/; HttpOnly; SameSite=Lax
+
+### Read a user by ID
+GET http://localhost:4000/user-api/users/1
+
+### Create new user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "UserName":"rajesh",
+    "password":"rajesh",
+    "email":"rajesh@gmail.com",
+    "age":20
+}
+
+
+### Update a user
+PUT  http://localhost:4000/user-api/users/69aa720ff2c2e19a83e3b76c
+Content-Type: application/json
+
+{
+    "UserName":"rajesh",
+    "password":"rajesh",
+    "email":"rajesh@gmail.com",
+    "age":20
+}
+
+
+### Delete a user by ID
+DELETE  http://localhost:4000/user-api/users/69aa720ff2c2e19a83e3b76c
+
+###
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "email":"rajesh@gmail.com",
+    "password":"rajesh"
+}
+
+
+  
+### Create a product
+POST http://localhost:3000/product-api/product
+Content-Type: application/json
+
+{
+    "productId":2,
+    "pName":"Watch",
+    "pBrand":"Samsung",
+    "price":50000
+}
+
+### Read all products
+GET http://localhost:3000/product-api/product
+
+### Read all products by brand
+GET http://localhost:3000/product-api/product/Apple
+
+### Update a product
+PUT http://localhost:3000/product-api/product
+Content-Type: application/json
+
+{
+    "productId":1,
+    "pName":"Phone",
+    "pBrand":"Samsung",
+    "price":100000
+}
+
+
+### Delete product by id
+DELETE http://localhost:3000/product-api/product/2

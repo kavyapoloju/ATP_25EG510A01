@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShareCounter</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState } = React;
+
+      // Shared state lifted to parent — demonstrates "lifting state up" in React
+      function CounterBox({ label, count, onIncrement, onDecrement, color }) {
+        return (
+          <div style={{ ...styles.box, borderTop: `4px solid ${color}` }}>
+            <h3 style={{ color, margin: "0 0 12px" }}>{label}</h3>
+            <div style={styles.countDisplay}>{count}</div>
+            <div style={styles.btnRow}>
+              <button style={{ ...styles.circleBtn, background: "#ef4444" }} onClick={onDecrement}>−</button>
+              <button style={{ ...styles.circleBtn, background: color }} onClick={onIncrement}>+</button>
+            </div>
+          </div>
+        );
+      }
+
+      function App() {
+        const [countA, setCountA] = useState(0);
+        const [countB, setCountB] = useState(0);
+
+        const total = countA + countB;
+
+        return (
+          <div style={styles.page}>
+            <h2 style={styles.title}>Shared Counter</h2>
+            <p style={styles.subtitle}>Two counters sharing a combined total — demonstrating <strong>lifted state</strong> in React</p>
+
+            <div style={styles.totalBadge}>
+              Combined Total: <span style={styles.totalNum}>{total}</span>
+            </div>
+
+            <div style={styles.grid}>
+              <CounterBox
+                label="Counter A"
+                count={countA}
+                color="#6366f1"
+                onIncrement={() => setCountA(countA + 1)}
+                onDecrement={() => setCountA(Math.max(0, countA - 1))}
+              />
+              <CounterBox
+                label="Counter B"
+                count={countB}
+                color="#f59e0b"
+                onIncrement={() => setCountB(countB + 1)}
+                onDecrement={() => setCountB(Math.max(0, countB - 1))}
+              />
+            </div>
+
+            <button style={styles.resetBtn} onClick={() => { setCountA(0); setCountB(0); }}>
+              Reset All
+            </button>
+          </div>
+        );
+      }
+
+      const styles = {
+        page: { minHeight: "100vh", background: "#fafafa", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", fontFamily: "sans-serif", padding: 16 },
+        title: { margin: "0 0 8px", fontSize: 28, color: "#1e293b" },
+        subtitle: { color: "#64748b", textAlign: "center", margin: "0 0 24px", fontSize: 14 },
+        totalBadge: { background: "#1e293b", color: "#fff", borderRadius: 12, padding: "12px 32px", fontSize: 18, marginBottom: 32 },
+        totalNum: { fontSize: 26, fontWeight: "bold", marginLeft: 8 },
+        grid: { display: "flex", gap: 24, flexWrap: "wrap", justifyContent: "center" },
+        box: { background: "#fff", borderRadius: 12, padding: "24px 32px", boxShadow: "0 2px 12px rgba(0,0,0,0.07)", textAlign: "center", minWidth: 180 },
+        countDisplay: { fontSize: 52, fontWeight: "bold", color: "#1e293b", margin: "8px 0 16px" },
+        btnRow: { display: "flex", gap: 16, justifyContent: "center" },
+        circleBtn: { width: 44, height: 44, borderRadius: "50%", border: "none", color: "#fff", fontSize: 24, cursor: "pointer", lineHeight: "44px", textAlign: "center" },
+        resetBtn: { marginTop: 32, padding: "10px 32px", background: "transparent", border: "2px solid #cbd5e1", borderRadius: 8, color: "#475569", fontSize: 15, cursor: "pointer" },
+      };
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+  </body>
+</html>

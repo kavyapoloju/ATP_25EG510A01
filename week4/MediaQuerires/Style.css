@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+h3{
+    font-size: clamp(20px,3vw,5px);
+}
+img{
+    width:100%;
+    max-width:200px;
+}
+@media screen and (max-width:600px){
+    body{
+          background-color: blue;
+    }
+    
+}
+@media screen and (min-width:599px){
+    body{
+          background-color: red;
+    }
+    
+}

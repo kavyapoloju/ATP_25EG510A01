@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet+Guides&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/*width and bgc should be same for healing1 and 2 ant the remain are diff*/
+.healing1{
+    width:700;
+    background-color: red;
+    color:white;
+    font-size: 40px;
+    padding: 30px;
+    margin:
+}

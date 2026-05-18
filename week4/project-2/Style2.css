@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet+Guides&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+
+
+.healing2{
+    /*width: 100%;
+    height:100%;*/
+    border: 10px solid red;
+    padding: 10px;
+    background-color: aquamarine;
+    /*text-align: center;*/
+    margin: 100px;;
+    /*border-radius: 50%;*/
+    color:#f47404;
+    font: size 90px ;
+     font-family:"Playwrite DK Uloopet Guides", cursive; ;
+}

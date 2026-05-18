@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Best City Guide</title>
+  <link rel="stylesheet" href="cityPage.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="nav-brand">Best City Guide</span>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">ICE CREAM</a></li>
+        <li><a href="#">DONUTS</a></li>
+        <li><a href="#">TEA</a></li>
+        <li><a href="#">COFFEE</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-icon">
+      <!-- City building SVG icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="90" height="90" fill="white">
+        <rect x="35" y="20" width="30" height="60" rx="2"/>
+        <rect x="20" y="40" width="18" height="40" rx="2"/>
+        <rect x="62" y="40" width="18" height="40" rx="2"/>
+        <rect x="44" y="10" width="12" height="15" rx="1"/>
+        <rect x="40" y="30" width="8" height="8" rx="1" fill="#1a237e"/>
+        <rect x="52" y="30" width="8" height="8" rx="1" fill="#1a237e"/>
+        <rect x="40" y="45" width="8" height="8" rx="1" fill="#1a237e"/>
+        <rect x="52" y="45" width="8" height="8" rx="1" fill="#1a237e"/>
+        <rect x="44" y="60" width="12" height="20" rx="1" fill="#1a237e"/>
+        <rect x="24" y="50" width="6" height="6" rx="1" fill="#1a237e"/>
+        <rect x="24" y="62" width="6" height="6" rx="1" fill="#1a237e"/>
+        <rect x="70" y="50" width="6" height="6" rx="1" fill="#1a237e"/>
+        <rect x="70" y="62" width="6" height="6" rx="1" fill="#1a237e"/>
+      </svg>
+    </div>
+    <h1 class="hero-title">The Best City</h1>
+    <p class="hero-subtitle">The best drinks and eats in the best city ever.</p>
+  </section>
+
+  <!-- CONTENT SECTION -->
+  <section class="content-section">
+    <div class="content-grid">
+
+      <!-- Welcome -->
+      <div class="content-col">
+        <h2 class="col-heading">Welcome!</h2>
+        <p class="col-text">
+          Everything in this city is worth waiting in line for.
+        </p>
+        <p class="col-text">
+          Cupcake ipsum dolor sit. Amet chocolate cake gummies jelly beans candy bonbon brownie candy. Gingerbread powder brownie muffin. Icing cotton candy. Croissant icing pie ice cream brownie I love cheesecake cookie. Pastry chocolate pastry jelly croissant.
+        </p>
+        <p class="col-text">
+          Cake sesame snaps sweet tart candy canes tiramisu I love oat cake chocolate bar. Jelly beans pastry brownie sugar plum pastry bear claw tiramisu tootsie roll. Tootsie roll wafer I love chocolate donuts.
+        </p>
+      </div>
+
+      <!-- Great Food -->
+      <div class="content-col">
+        <h2 class="col-heading">Great food</h2>
+        <div class="food-grid">
+          <div class="food-item">
+            <!-- Coffee cup -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="70" height="70">
+              <rect x="10" y="25" width="45" height="35" rx="5" fill="#fff" stroke="#ccc" stroke-width="2"/>
+              <path d="M55 32 Q70 32 70 42 Q70 52 55 52" fill="none" stroke="#ccc" stroke-width="2"/>
+              <ellipse cx="32" cy="25" rx="22" ry="5" fill="#4a2c00"/>
+              <rect x="18" y="58" width="30" height="4" rx="2" fill="#ccc"/>
+            </svg>
+          </div>
+          <div class="food-item">
+            <!-- Ice cream -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="70" height="70">
+              <ellipse cx="40" cy="28" rx="22" ry="20" fill="#f48fb1"/>
+              <polygon points="40,68 25,38 55,38" fill="#ffe082"/>
+              <circle cx="52" cy="18" r="4" fill="#f06292"/>
+              <line x1="52" y1="14" x2="52" y2="8" stroke="#795548" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="food-item">
+            <!-- Donut -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="70" height="70">
+              <circle cx="40" cy="40" r="28" fill="#8d4004"/>
+              <circle cx="40" cy="40" r="10" fill="white"/>
+              <circle cx="40" cy="40" r="28" fill="none" stroke="#a0522d" stroke-width="2"/>
+              <ellipse cx="40" cy="26" rx="20" ry="8" fill="#f48fb1" opacity="0.7"/>
+              <circle cx="30" cy="28" r="2" fill="#fff"/>
+              <circle cx="40" cy="24" r="2" fill="#fff"/>
+              <circle cx="50" cy="28" r="2" fill="#fff"/>
+            </svg>
+          </div>
+          <div class="food-item">
+            <!-- Tea cup -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="70" height="70">
+              <rect x="15" y="28" width="38" height="28" rx="5" fill="#a5d6a7" stroke="#ccc" stroke-width="1.5"/>
+              <path d="M53 35 Q65 35 65 44 Q65 53 53 53" fill="none" stroke="#ccc" stroke-width="2"/>
+              <ellipse cx="34" cy="28" rx="19" ry="4" fill="#81c784"/>
+              <rect x="20" y="55" width="28" height="3" rx="1.5" fill="#ccc"/>
+            </svg>
+          </div>
+        </div>
+        <p class="col-text">
+          Croissant macaroon pie brownie. Cookie marshmallow liquorice gingerbread caramels toffee I love chocolate. Wafer lollipop dessert. Bonbon jelly beans pudding dessert sugar plum. Marzipan toffee dragée chocolate bar candy toffee pudding I love. Gummi bears pie gingerbread lollipop.
+        </p>
+      </div>
+
+      <!-- How to get here -->
+      <div class="content-col">
+        <h2 class="col-heading">How to get here</h2>
+        <p class="col-text">
+          <strong>Plane:</strong> Tiramisu caramels gummies chupa chups lollipop muffin. Jujubes chocolate caramels cheesecake brownie lollipop dragée cheesecake.
+        </p>
+        <p class="col-text">
+          <strong>Train:</strong> Pie apple pie pudding I love wafer toffee liquorice sesame snaps lemon drops. Lollipop gummi bears dessert muffin I love fruitcake toffee pie.
+        </p>
+        <p class="col-text">
+          <strong>Car:</strong> Jelly cotton candy bonbon jelly-o jelly-o I love. I love sugar plum chocolate cake pie I love pastry liquorice.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
